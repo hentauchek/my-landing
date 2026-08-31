@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш Лендинг</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">Brand</div>
+            <nav class="header__nav">
+                <a href="#features">Преимущества</a>
+                <a href="#how">Как это работает</a>
+                <a href="#price">Цены</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <button class="btn btn--header" onclick="openModal()">Заказать</button>
+            <button class="burger" id="burger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Заголовок вашего продукта</h1>
+                <p class="hero__subtitle">Описание того, что вы продаёте. Кратко, ёмко и по делу.</p>
+                <div class="hero__buttons">
+                    <button class="btn btn--primary btn--lg" onclick="openModal()">Начать сейчас</button>
+                    <button class="btn btn--outline btn--lg" onclick="openModal()">Узнать больше</button>
+                </div>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number" data-target="500">0</span>+
+                        <span class="stat__label">Клиентов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number" data-target="98">0</span>%
+                        <span class="stat__label">Довольных</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number" data-target="5">0</span>
+                        <span class="stat__label">Лет опыта</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__mockup"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">Три причины, по которым вы останетесь довольны</p>
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#9889;</div>
+                    <h3 class="feature-card__title">Быстро</h3>
+                    <p class="feature-card__text">Получите результат за 24 часа. Никакого ожидания неделями.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#9733;</div>
+                    <h3 class="feature-card__title">Качественно</h3>
+                    <p class="feature-card__text">Современные стандарты. Чистый код. Адаптивный дизайн.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">&#128176;</div>
+                    <h3 class="feature-card__title">Доступно</h3>
+                    <p class="feature-card__text">Честные цены без скрытых доплат. Фиксированная стоимость.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how" id="how">
+        <div class="container">
+            <h2 class="section-title">Как это работает</h2>
+            <p class="section-subtitle">Три простых шага до результата</p>
+            <div class="how__steps">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <h3 class="step__title">Оставляете заявку</h3>
+                    <p class="step__text">Заполняете форму или пишете в чат. Обсуждаем детали проекта.</p>
+                </div>
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <h3 class="step__title">Мы работаем</h3>
+                    <p class="step__text">Создаём проект. Показываем промежуточные результаты.</p>
+                </div>
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <h3 class="step__title">Получаете результат</h3>
+                    <p class="step__text">Сдаём готовый проект. Поддерживаем после запуска.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price" id="price">
+        <div class="container">
+            <h2 class="section-title">Тарифы</h2>
+            <p class="section-subtitle">Выберите подходящий вариант</p>
+            <div class="price__grid">
+                <div class="price-card">
+                    <h3 class="price-card__name">Базовый</h3>
+                    <div class="price-card__cost">15 000 &#8381;</div>
+                    <ul class="price-card__list">
+                        <li>Одностраничный сайт</li>
+                        <li>Адаптивный дизайн</li>
+                        <li>Форма заявки</li>
+                        <li>Базовая SEO-настройка</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full" onclick="openModal()">Заказать</button>
+                </div>
+                <div class="price-card price-card--popular">
+                    <div class="price-card__badge">Популярный</div>
+                    <h3 class="price-card__name">Стандарт</h3>
+                    <div class="price-card__cost">35 000 &#8381;</div>
+                    <ul class="price-card__list">
+                        <li>До 5 страниц</li>
+                        <li>Анимации и эффекты</li>
+                        <li>Интеграция с CRM</li>
+                        <li>Полная SEO-оптимизация</li>
+                        <li>Поддержка 1 месяц</li>
+                    </ul>
+                    <button class="btn btn--primary btn--full" onclick="openModal()">Заказать</button>
+                </div>
+                <div class="price-card">
+                    <h3 class="price-card__name">Премиум</h3>
+                    <div class="price-card__cost">75 000 &#8381;</div>
+                    <ul class="price-card__list">
+                        <li>Многостраничный сайт</li>
+                        <li>Кастомный дизайн</li>
+                        <li>Личный кабинет</li>
+                        <li>Аналитика и метрики</li>
+                        <li>Поддержка 3 месяца</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full" onclick="openModal()">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы</h2>
+            <div class="faq__list">
+                <div class="faq-item">
+                    <button class="faq-item__question" onclick="toggleFaq(this)">
+                        Сколько времени занимает создание?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>От 1 до 7 дней в зависимости от сложности проекта. Точные сроки обсуждаем перед началом работы.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" onclick="toggleFaq(this)">
+                        Можно ли внести правки?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Да, в каждом тарифе предусмотрены правки. Количество зависит от выбранного пакета.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" onclick="toggleFaq(this)">
+                        Как происходит оплата?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>50% предоплата, 50% после сдачи. Принимаем переводы и карты.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question" onclick="toggleFaq(this)">
+                        Предоставляете ли вы хостинг?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Да, помогаем с выбором хостинга и размещением сайта. Также консультируем по домену.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta__title">Готовы начать?</h2>
+            <p class="cta__text">Оставьте заявку и получите бесплатную консультацию</p>
+            <button class="btn btn--primary btn--lg" onclick="openModal()">Заказать лендинг</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">Brand</div>
+                <div class="footer__links">
+                    <a href="#features">Преимущества</a>
+                    <a href="#how">Как это работает</a>
+                    <a href="#price">Цены</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://t.me/kullyuki" target="_blank">Telegram: @kullyuki</a>
+                </div>
+            </div>
+            <div class="footer__copy">&copy; 2026 Brand. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" onclick="closeModal()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()">&times;</button>
+            <h2 class="modal__title">Оставьте заявку</h2>
+            <p class="modal__text">Мы свяжемся с вами в течение 30 минут</p>
+            <form class="modal__form" onsubmit="submitForm(event)">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Опишите ваш проект" rows="3"></textarea>
+                <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
